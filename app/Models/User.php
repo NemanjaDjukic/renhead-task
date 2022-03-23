@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\CascadeSoftDeletes;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -11,7 +12,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, CascadeSoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -23,6 +24,11 @@ class User extends Authenticatable
         'last_name',
         'password',
         'type',
+    ];
+    protected $cascadeDeletes = [
+        'payments',
+        'travel_payments',
+        'payment_approvals',
     ];
 
     /**

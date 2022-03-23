@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\CascadeSoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -12,9 +13,13 @@ class TravelPayment extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    use CascadeSoftDeletes;
 
     protected $fillable = [
         'amount',
+    ];
+    protected $cascadeDeletes = [
+        'payment_approval',
     ];
 
     public function user(): BelongsTo
