@@ -40,7 +40,7 @@ You can now access the server at http://localhost:8000
 
 # Testing API
 
-**If you are using postman, you can import collection from main folder of app - /Renhead.postman_collection.json **
+**If you are using postman, you can import collection from main folder of app - /Renhead.postman_collection.json**
 
 Run the laravel development server
 
