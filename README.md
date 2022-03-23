@@ -16,7 +16,13 @@ Switch to the repo folder
 
     cd renhead-task
 
-Edit the .env file
+Copy the example env file and make the required configuration changes in the .env file or just change existing .env file
+
+    cp .env.example .env
+
+Install dependencies
+
+    composer install
 
 Run the database migrations (**Set the database connection in .env before migrating**)
 
