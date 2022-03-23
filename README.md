@@ -48,6 +48,6 @@ Request headers
 
 | **Required** 	| **Key**              	 | **Value**            	 |
 |----------	|------------------------|-----------------------|
-| Yes      	| Content-Type     	     | application/json 	    |
+| Yes      	| Accept     	     | application/json 	    |
 | Yes      	| Content-Type 	         | application/json      |
 | Optional 	| Authorization    	     | Bearer Token     	    |
